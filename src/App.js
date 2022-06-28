@@ -1,19 +1,23 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Welcome from "./components/Welcome";
-import InputComponents from "./components/InputComponents";
+import ListComponents from "./components/ListComponent";
+import AxiosTest from "./pages/AxiosTest"
+import NewsApiPage from "./pages/NewsApiPage";
+import example from "./pages/example";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        내용
-        <Welcome username="Jann"></Welcome>
-        <InputComponents></InputComponents>
-        <h1>test</h1>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        
+        <Route path="/" element={<Welcome></Welcome>}></Route>
+        <Route path="/list" element={<ListComponents></ListComponents>}></Route>
+        <Route path="/axiosTest" element={<AxiosTest></AxiosTest>}></Route>
+        <Route path="/newsPage" element={<NewsApiPage></NewsApiPage>}></Route>
+        <Route path="/example" element={<Example></Example>}></Route>
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
