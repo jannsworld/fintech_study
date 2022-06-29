@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import TopBar from "../components/common/TopBar";
 import MainCard from "../components/main/MainCard";
 
+// git default branch change main to master
 const MainPage = () => {
     const [accountList, setAccountList] = useState([]);
     useEffect(() => {
